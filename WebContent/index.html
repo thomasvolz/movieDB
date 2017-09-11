@@ -22,7 +22,7 @@
 	</div>
 	</div>
 
-	<div class="main" ng-controller="MainController">
+	<div class="main" ng-controller='MainController'>
 		<div class="searchbar">
 			<input type="text" name="search" placeholder="Search for a movie">
 		</div>
@@ -31,19 +31,13 @@
 			<h1>{{ title }}</h1>
 			<h2>{{ promo }}</h2>
 
-			<div ng-repeat="movie in movies" class="col-md-6">
+			<div ng-repeat="details in movieList" class="col-md-6">
 				<div class="thumbnail">
 
-					<p class="title">{{ movie.title }}</p>
-					<p class="price">{{ product.price | currency }}</p>
-					<p class="date">{{ product.pubdate | date }}</p>
+					<p class="title">{{ details.page }}</p>
+					<p class="date">{{ details.release_date | date }}</p>
 				</div>
-				<div class="rating">
-					<p class="likes" ng-click="plusOne($index)">+ {{ product.likes
-						}}</p>
-					<p class="dislikes" ng-click="minusOne($index)">- {{
-						product.dislikes }}</p>
-				</div>
+
 			</div>
 		</div>
 	</div>
