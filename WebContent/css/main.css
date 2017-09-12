@@ -25,7 +25,6 @@ html, body {
 div.searchbar {
 	position: relative;
     left: 40px;
-    border: 3px solid #73AD21;
 }
 
 .main h1 {

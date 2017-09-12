@@ -5,12 +5,19 @@
 	href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css"
 	rel="stylesheet" />
 
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<!-- Modules -->
+<script src="js/app.js"></script>
+
+<!-- Controllers -->
+<script src="js/controllers/MainController.js"></script>
 <link href="css/main.css" rel="stylesheet" />
 
-<!-- Include the AngularJS library -->
-<script
-	src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+
 </head>
+
 <body ng-app="myApp">
 	<div class="header">
 		<img src="img\logo.png"
@@ -20,36 +27,38 @@
 		<h1>The MovieDB Search Tool</h1>
 		<h2>Search for a movie!</h2>
 	</div>
-	</div>
 
 	<div class="main" ng-controller='MainController'>
 		<div class="searchbar">
-			<input type="text" name="search" placeholder="Search for a movie">
+			<form ng-submit="submitFunction()">
+				<input type="text" ng-model="movieTitle"
+					placeholder="Search for a movie"> <input
+					type="submit" value="Submit">
+			</form>
+			<br>
 		</div>
 		<div class="container">
-
-			<h1>{{ title }}</h1>
-			<h2>{{ promo }}</h2>
-
+		<p>The value for movie is: <script type = "text/javascript">document.write(movie)</script>
+		<p>{{results}} results found</p>
 			<div ng-repeat="details in movieList" class="col-md-6">
 				<div class="thumbnail">
-
-					<p class="title">{{ details.page }}</p>
-					<p class="date">{{ details.release_date | date }}</p>
+					<img
+						ng-src="https://image.tmdb.org/t/p/w154{{details.poster_path}}">
+					<p>{{ details.title }}</p>
+					<p class="date">Release Date: {{ details.release_date | date }}</p>
+					<p>{{details.overview}}</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="footer">
-		<div class="container"></div>
+		<div class="container">
+		<p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+		</div>
 	</div>
 
 
-	<!-- Modules -->
-	<script src="js/app.js"></script>
 
-	<!-- Controllers -->
-	<script src="js/controllers/MainController.js"></script>
 </body>
 </html>
