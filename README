@@ -1,10 +1,13 @@
 ************************************
 The MovieDB Simple Movie Search Tool
 ************************************
-
+---------------------
 design by:Thomas Volz
+---------------------
 
+******
 About:
+******
 
 This is an attempt to learn a bit about web development and the utilization of restful API's
 using The MovieDB's restful service.
@@ -12,16 +15,60 @@ using The MovieDB's restful service.
 This task was given to me originally upon a job application and I thought it would be a great opportunity
 to learn more about using Angular and restful API services.
 
-
+************
 Development:
+************
 
-Production of this product was done using the Eclipse IDE and the Angular support set for it.
-It includes a basic index.html page that calls to a javascript backend.
+Production of this product was done using the Eclipse IDE, Apache Tomcat Sever 8.5,
+and the Angular support set for it.  It includes a basic index.html page that calls 
+to a javascript backend.
 
 I am using Bootstrap for the CSS design of the page, hopefully everything looks good.
 
 The logic is written by me.  It did take a bit of time, I'm not the sharpest tool or the quickest
 student but I do learn.
 
-This product is best viewed on Google Chrome, I tested it in Chrome and Firefox, for some reason images weren't
-loading in Firefox even though I was not disabling them.  On Chrome it worked fine.
+This product is best viewed on Google Chrome, I tested it in Chrome and Firefox, for some reason 
+images weren't loading in Firefox even though I was not disabling them.  On Chrome it worked fine.
+
+*********************
+Building and Running:
+*********************
+
+The file structure is needed for this as this is an Angular project built in Eclipse.  This must be either 
+deployed or run on a simulated server environment such as Apache Tomcat.
+
+Access index.html, enter your search query into the field and view your returned results.
+
+*************
+Known Issues:
+*************
+
+Formatting:  I have tried to get the returned results to align in a column style and be even,
+but they are being offset and several results appear in an uneven format.  I believe this is in the
+column spacing for the ng-repeat command and will look into cleaning this up.
+
+Multiple pages of results: At this time I am showing only one page of results.  In some cases
+this is fine, a query of 'Deadpool' returns 7 results on 1 page, but a query of 'Titanic' returns
+98 results over 5 pages.  I will either need to ensure all results populate on one page or
+produce multiple pages for large returns such as this.
+
+*******************
+Future Development:
+*******************
+
+I would like to display a little bit more information on the movies if I can.  The MovieDB api's 'get'
+does not include 'Budget' or 'Box Office'.  Personally, I like to see this information when I'm looking
+at a movie and get annoyed when I have to go digging for it.  For example, look up a movie on Metacritic
+or Rotten Tomatoes and you get such small info on it.  Their rating is prominent, then user ratings, then
+not much else.  
+
+The box office and budget to me is the most important aggregate of how good a movie was.  Well, except
+when it's an Adam Sandler film.
+
+I'd also like to add 'starring' and 'directed' to the return, but these aren't in the 'get' query.  These
+are likely available through other restful methods and so are in line for my next stages in developing this.
+
+I believe I will continue to work on this, it's good to learn how to do new things and this gives me
+an excuse to do just that.
+
