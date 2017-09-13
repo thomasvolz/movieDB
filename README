@@ -17,3 +17,11 @@ Development:
 
 Production of this product was done using the Eclipse IDE and the Angular support set for it.
 It includes a basic index.html page that calls to a javascript backend.
+
+I am using Bootstrap for the CSS design of the page, hopefully everything looks good.
+
+The logic is written by me.  It did take a bit of time, I'm not the sharpest tool or the quickest
+student but I do learn.
+
+This product is best viewed on Google Chrome, I tested it in Chrome and Firefox, for some reason images weren't
+loading in Firefox even though I was not disabling them.  On Chrome it worked fine.

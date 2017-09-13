@@ -9,10 +9,18 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 	        .then(successCallback, errorCallback);
 	}
 	function successCallback(response){
-		//$scope.resultList = response.data
+
 		$scope.results = response.data.total_results
 		$scope.movieList = response.data.results
-		
+
+	    $scope.$watch('results', function () {
+	        if ($scope.results < 1) {
+	            $scope.output = "No results found!";
+	            $scope.results = '';
+	        } else {
+	            $scope.output = "results found; Here are the top results!";
+	        }
+	    });
 	}
 
 	function errorCallback(error){

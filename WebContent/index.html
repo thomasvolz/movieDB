@@ -1,10 +1,8 @@
 <!doctype html>
 <html>
 <head>
-<link
-	href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css"
-	rel="stylesheet" />
-
+<!-- Bootstrap inclusion -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
@@ -32,19 +30,18 @@
 		<div class="searchbar">
 			<form ng-submit="submitFunction()">
 				<input type="text" ng-model="movieTitle"
-					placeholder="Search for a movie"> <input
-					type="submit" value="Submit">
+					placeholder="Search for a movie"> <input type="submit"
+					value="Submit">
 			</form>
 			<br>
 		</div>
 		<div class="container">
-		<p>The value for movie is: <script type = "text/javascript">document.write(movie)</script>
-		<p>{{results}} results found</p>
+			<p>{{results}} {{output}}</p>
 			<div ng-repeat="details in movieList" class="col-md-6">
 				<div class="thumbnail">
 					<img
 						ng-src="https://image.tmdb.org/t/p/w154{{details.poster_path}}">
-					<p>{{ details.title }}</p>
+					<div class="title"><p>{{ details.title }}</p></div>
 					<p class="date">Release Date: {{ details.release_date | date }}</p>
 					<p>{{details.overview}}</p>
 				</div>
@@ -54,7 +51,10 @@
 
 	<div class="footer">
 		<div class="container">
-		<p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+			<p>This product uses the TMDb API but is not endorsed or
+				certified by TMDb.</p>
+				<br>
+				<p>Best Viewed in Google Chrome</p>
 		</div>
 	</div>
 
