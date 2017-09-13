@@ -15,6 +15,7 @@ using The MovieDB's restful service.
 This task was given to me originally upon a job application and I thought it would be a great opportunity
 to learn more about using Angular and restful API services.
 
+
 ************
 Development:
 ************
@@ -30,6 +31,21 @@ student but I do learn.
 
 This product is best viewed on Google Chrome, I tested it in Chrome and Firefox, for some reason 
 images weren't loading in Firefox even though I was not disabling them.  On Chrome it worked fine.
+
+****************
+Important Files:
+****************
+
+WebContent/
+-----------index.html /*The main functioning page for the query*/
+-----------css/
+---------------main.css /*CSS Style sheet */
+-----------img/ /*All included images, such as The MovieDB logo */
+-----------js/
+--------------app.js /*instantiation of the main control app */
+--------------controllers/
+--------------------------MainController.js /*The main control function for the restful query */
+
 
 *********************
 Building and Running:

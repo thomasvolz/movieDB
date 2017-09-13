@@ -1,6 +1,4 @@
 var api_key='bfabcf706e4bf2736881f5765f61c5dd';
-var movie='Deadpool';
-var trumovie='Titanic';
 var resultCount;
 
 /*Main controller function
